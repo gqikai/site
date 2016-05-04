@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>YouChat</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="static/css/cover.css">
+
+    <link rel="stylesheet" href="static/css/perfect-scrollbar.min.css">
+
+    <link rel="stylesheet" href="static/css/custom.css">
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <!--小屏幕导航按钮和logo-->
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html" class="navbar-brand">Java聊天室</a>
+        </div>
+
+    </div>
+</nav>
+<!--导航-->
+
+<div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane " id="home">
+                    <div class="inner cover">
+                        <h1 class="cover-heading">YouChat</h1>
+                        <p class="lead">YouChat is a Java chat room, using websocket.</p>
+                        <p class="lead">
+                            <a href="#" class="btn btn-lg btn-default">Join Now</a>
+                        </p>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane active" id="chat">
+                    <div class="row">
+
+                        <div id="chat-container" class="col-lg-offset-1 col-lg-5">
+                            <div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                        <div id="room-info" class   ="panel panel-default">
+                            <div class="panel-heading">当前人数:<b>0</b></div>
+                            <ul class="list-group">
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="input-info"></span>
+                        <input id="input-text" type="text" class="form-control" placeholder="Input /help to get help" aria-describedby="basic-addon1">
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script src="static/js/jquery.min.js"></script>
+
+<script src="static/js/bootstrap.min.js"></script>
+
+<script src="static/js/perfect-scrollbar.min.js"></script>
+
+<script src="static/js/sha512.js"></script>
+
+<script src="static/js/main.js"></script>
+
+
+</body>
+</html>
