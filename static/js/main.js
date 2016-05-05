@@ -55,6 +55,7 @@ youchat.client.callback.onmessage = function (e) {
         case "msg":
             youchat.add_chat_content(json.msg);
             break;
+
     }
 
     switch (json.type) {
@@ -71,6 +72,9 @@ youchat.client.callback.onmessage = function (e) {
             youchat.add_chat_content(json.msg);
             break;
         case "msg":
+            youchat.add_chat_content(json.id + ':' + json.msg);
+            break;
+        case "send":
             youchat.add_chat_content(json.id + ':' + json.msg);
             break;
     }
@@ -100,9 +104,7 @@ youchat.handler["/msg"] = function() {
 
 youchat.handler["/login"] = function(cmd) {
     var _, user_id, passwd;
-
-    
-    //[_, user_id, passwd] = cmd.split(" ");
+    [_, user_id, passwd] = cmd.split(" ");
     if (!user_id || !passwd){
         youchat.add_chat_content("login format wrong, enter /help to get help");
         return;
@@ -137,10 +139,11 @@ youchat.handler["/reg"] = function(cmd) {
 
 youchat.handler["/send"] = function() {
     var inputArr = youchat.dom.input_text.val().split(" ");
+    console.log(inputArr)
     var json = JSON.stringify({
         type: "send",
         id: youchat.user.id,
-        to: inputArr.slice(1),
+        to: inputArr[1],
         msg: inputArr.slice(2)
     });
     console.log("msg:" + json);
